@@ -22,12 +22,12 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "CI= npm run build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "scripts": {
     "build:css": "postcss src/assets/css/tailwind.css -o src/assets/css/style.css",
-    "build:watch": "postcss src/assets/css/tailwind.css -o src/assets/css/style.css --watch"
+    "start": "npm run build:css && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
